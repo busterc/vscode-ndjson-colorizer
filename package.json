@@ -1,0 +1,37 @@
+{
+  "name": "ndjson-colorizer",
+  "displayName": "NDJSON Colorizer",
+  "description": "colorizes NDJSON (Newline Delimted JSON) files",
+  "version": "1.0.0",
+  "publisher": "buster",
+  "license": "ISC",
+  "icon": "images/ndjson.png",
+  "engines": {
+    "vscode": "^1.20.0"
+  },
+  "categories": ["Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ndjson",
+        "aliases": ["NDJSON", "ndjson"],
+        "extensions": [".ndjson"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ndjson",
+        "scopeName": "source.ndjson",
+        "path": "./syntaxes/ndjson.tmLanguage.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/busterc/vscode-ndjson-colorizer"
+  },
+  "bugs": {
+    "url": "https://github.com/busterc/vscode-ndjson-colorizer/issues"
+  }
+}
