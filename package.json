@@ -9,13 +9,35 @@
   "engines": {
     "vscode": "^1.20.0"
   },
-  "categories": ["Languages"],
+  "categories": [
+    "Languages"
+  ],
+  "main": "./out/src/extension",
+  "activationEvents": [
+    "onLanguage:ndjson"
+  ],
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.32",
+    "@types/node": "^6.0.40",
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0"
+  },
   "contributes": {
     "languages": [
       {
         "id": "ndjson",
-        "aliases": ["NDJSON", "ndjson"],
-        "extensions": [".ndjson"],
+        "aliases": [
+          "NDJSON",
+          "ndjson"
+        ],
+        "extensions": [
+          ".ndjson"
+        ],
         "configuration": "./language-configuration.json"
       }
     ],
